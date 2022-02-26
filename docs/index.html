@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DApp Token ICO Sale</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+      
+      <!-- BRAND -->
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GG Code</a>
+      </div>
+      
+      <!-- COLLAPSIBLE NAVBAR -->
+      <div class="collapse navbar-collapse" id="alignment-example">
+      
+      <!-- Links -->
+      <ul class="nav navbar-nav">
+      <li><a href="https://github.com/GGCodeLatam" target="blank">Github</a></li>
+      <li><a href="https://linkedin.com/in/gabriel-giana" target="blank">Linkedin</a></li>
+      </ul>
+      
+      
+      </div>
+      
+      </div>
+      </nav>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12" >
+            <h1 class="text-center"><strong>DAPP TOKEN ICO SALE</strong></h1>
+            <hr/>
+        </div>
+        <div id="loader">
+          <p class="text-center">Loading...</p>
+        </div>
+        <br/>
+        <div id="content" class="text-center" style="display: none;">
+        
+          <p>
+            Aplicacion de presale "DApp Token" (DAPP)!
+            El valor del token es <span class="token-price"></span> Ether. Actualmente tienes <span class="dapp-balance"></span>&nbsp;DAPP.
+          </p>
+          <br/>
+          <form onSubmit="App.buyTokens(); return false;" role="form">
+            <div class="form-group">
+              <div class="input-group">
+                <input id="numberOfTokens" class="form-control input-lg" type="number" name="number" value="1" min="1" pattern="[0-9]">
+                </input>
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary btn-lg">Buy Tokens</button>
+                </span>
+              </div>
+            </div>
+          </form>
+          <br>
+          <div class="progress">
+              <div id="progress" class="progress-bar progress-bar-striped active" aria-valuemin="0" aria-valuemax="100">
+              </div>
+          </div>
+          <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> tokens vendidos</p>
+          <hr>
+       
+            <p id="accountAddress" class="active"></p>
+        
+        <blockquote>
+        Para interactuar con el contrato debes estar conectado a la red de Rinkeby
+      </blockquote>
+
+      <button type="button" class="btn btn-primary btn-lg" href="https://rinkeby.etherscan.io/token/0x5273D60428B60043CeCDBE7624089b09e067CF98" target="blank">Contrato del token</button>
+          <div class="alert alert-success" style="margin-top: 2vw;">
+            
+            <br/>
+            <h3><strong>Agregar Token a la wallet:</strong></h3>
+            
+            <div>
+              <br/>
+              <br/>
+            <p><strong>1.- Copiar contrato del token (0x5273D60428B60043CeCDBE7624089b09e067CF98)
+              <br/>
+              <br/>
+            2.- En metamask, ir a "importar token"
+            <br/><br/>
+            3.- Completar el primer campo con el hash del contrato, el segundo se llenara por defecto con el nombre del token.
+            <br/><br/>
+              4.- En decimales, poner "0"
+              <br/><br/>
+              5.- Listo! Ya podes visualizar tus Tokens en tu wallet!</strong></p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
